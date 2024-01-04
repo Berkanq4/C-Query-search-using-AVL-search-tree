@@ -161,64 +161,7 @@ struct WordItem {
         this->right = right;
     }
 
-    /*
-    void removeNode(string wrd) { //remove node
-        if (word < this->word) { //if data is less than current node
-            if (left != nullptr) { //if left is not null
-                if (left->word == word) { //if left data is equal to data
-                    if (left->left == nullptr && left->right == nullptr) { //if left left and left right is null
-                        delete left;
-                        left = nullptr;
-                    }
-                    else if (left->left == nullptr) {
-                        left = left->right;
-                    }
-                    else if (left->right == nullptr) {
-                        left = left->left;
-                    }
-                    else {
-                        WordItem* temp = left->right;
-                        while (temp->left != nullptr) {
-                            temp = temp->left;
-                        }
-                        left->word = temp->word;
-                        left->removeNode(temp->word);
-                    }
-
-                }
-                else {
-                    left->removeNode(word);
-                }
-            }
-        }
-        else if (word > this->word) {
-            if (right != nullptr) {
-                if (right->word == word) {
-                    if (right->left == nullptr && right->right == nullptr) {
-                        delete right;
-                        right = nullptr;
-                    }
-                    else if (right->left == nullptr) {
-                        right = right->right;
-                    }
-                    else if (right->right == nullptr) {
-                        right = right->left;
-                    }
-                    else {
-                        WordItem* temp = right->right; //if right right is not null
-                        while (temp->left != nullptr) { //while temp left is not null
-                            temp = temp->left;
-                        }
-                        right->word = temp->word;
-                        right->removeNode(temp->word);
-                    }
-                }
-                else {
-                    right->removeNode(word);
-                }
-            }
-        }
-    }*/
+   
 
     WordItem* removeNode(string wrd) {
         WordItem* newRoot = this; // By default, the new root is 'this'
